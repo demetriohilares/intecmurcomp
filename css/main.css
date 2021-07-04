@@ -1,0 +1,191 @@
+/*  scrollspy */
+body {
+    position: relative;
+ }
+/* fin de scrollspy */
+/* NAVBAR */
+#menu{
+    background-color:#00568C;
+}
+/*FIN NAVBAR */
+
+#ribbon{
+    background-color: rgba(8,149,224);
+    background-image:repeating-linear-gradient(-45deg,transparent,transparent 25px,rgba(0,86,140,0.5) 35px,rgba(0,86,140,0.5) 50px)
+}
+#ribbon::after{
+    content:'';
+    background-color: transparent;
+    display: block;
+    height:20px;
+    width: 50%;
+    margin: 0 auto;
+         /* ya que posicion relative hace que la caja sea independiendo y que no respete a las demas cajas */
+    position: relative;
+    left: auto;
+    margin-top: -40px;
+}
+#caja-sobre{
+    background-color: rgb(4, 117, 182);
+    /* con estas dos linea es posible que sobresalga  */
+     /* ya que posicion relative hace que la caja sea independiendo y que no respete a las demas cajas */
+    position: relative;
+    margin-top:-20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#caja-sobre img{
+         /* ya que posicion relative hace que la caja sea independiendo y que no respete a las demas cajas  */
+         /* ojo que siempre dejara su espacio en donde estaba un vacio */
+    position: relative;
+    margin-top: -30px;
+}
+.text-shadow{
+    text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+}
+
+#separador-ribbon{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index:2;
+}
+#separador-ribbon .content{
+    width: 150%;
+    height:150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.car-border{
+    border: solid 10px white;
+    border-radius: 20px;
+    /* para que se pueda desbordar */
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.car-border:hover{
+    transform: scale(1.05);
+}
+
+
+#servicios{
+background: rgb(255, 255, 255);
+background:  linear-gradient(0deg, rgba(255, 255, 255, 1) 0%,rgba(8,149,224,1) 57%);
+/* el fondo solo se repita en el eje x */
+background-repeat: repeat-x;
+background-size:16%;
+margin-top:-20px;
+}
+.boton-servicios{
+    background-color:rgb(255,175,0);
+    color:black;
+    border-color: white;
+    font-weight: 500;
+}
+.boton-servicios:hover{
+    background-color:rgb(236, 162, 2);
+    color:black;
+    border-color: white;
+    
+}
+
+/* carruserl */
+.centrar-texto-portada{
+bottom: 50%;
+top:40%;
+}
+
+#fondo {
+	text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+#fondo:before{
+    content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.75);
+}
+/* fin carrusel  */
+/*formulario de contactos*/
+.contactos{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background:url(../img/fondo-contactos-2.png)no-repeat;
+    background-size:100% 100%;
+     width: 100%;
+     height: 110vh;
+}
+.head{
+    /* background-color: rgb(185,19,185); */
+    background-color: rgb(255,175,0);
+
+    border-radius: 5px;
+    /* para que pase al lado superior, le dara un efecto */
+    margin-top: -40px;
+    /* esto lo saque de la pagina ya que ahi podemos acceder la las variables de box-shadow: ; https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+    -moz-box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+    box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+}
+.caja-relativa{
+    position: relative;
+  }
+.effect-1{
+    /*Esta propiedad quita los bodes que estan por defecto*/
+    border:0;
+    /* Esto le quita el borde  cuando llenamos algo a la caja */
+    outline:none;
+    width: 100%;
+    padding:7px 0;
+    /* con esto pones el borde abajo */
+    border-bottom: 1px solid #ccc;
+}
+.effect-1 ~ .focus-border-1{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width: 0;
+    height:2px;
+    background-color:rgb(255,175,0);
+    transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border-1{
+    width: 100%;
+    transition:0.4s;
+    left:0;
+}
+.btn-enviar{
+    background-color: rgb(255,175,0);
+    color:rgb(58, 58, 58);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    /* height:40px;
+    width: 90%; */
+    padding:10px 15px;
+}
+.btn-enviar:hover{
+        /* esto lo saque de la pagina ya que ahi podemos acceder la las variables de box-shadow: ; https://www.cssmatic.com/box-shadow */
+        -webkit-box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+        -moz-box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+        box-shadow: -1px 9px 27px -12px rgba(255,175,0,1);
+}
+/*fin de formulario de contactos*/
+
+/*Footer*/
+#footer a{
+text-decoration: none;
+cursor: pointer;
+transition: all 300ms;
+}
+#footer a:hover{
+color: darkgoldenrod !important;
+    }

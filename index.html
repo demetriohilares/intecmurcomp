@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTEC MURCOMP</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- recien lo va crear  -->
+    <link rel="stylesheet" href="./css/main.css">
+       <!-- EFECTO DE SCROLLSPY  -->
+    <!-- para crear este efecto agregamos una posicion relativa al body insertamos las clases al body data-bs-spy="scroll" data-bs-target="#menu"
+    el identificador al nav id="menu"
+    colocar la clase  nav-pills en la ul -->
+    <!-- y en el primer enlace a colocamos active; -->
+    <!-- tambien tenemos que agregar fixed-top al van para que se quede pegado en la pantall -->
+    <!-- enlace para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menu">
+    <!-- NAVBAR -->
+    <!-- para que tenga fondo negro u oscuro bg-dark -->
+    <!-- navbar-expand-sm para que se expanda  -->
+    <nav id="menu"  class="navbar sticky-top navbar-expand-sm navbar-dark  " >
+        <!-- container-fluid para que tenga todo el ancho -->
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand " href="#"><img src="./img/logo-em.png" alt="Logo" class="me-2"
+                        style="width:70px;" /></a>
+                <a href="#" class="navbar-brand">INTEC MURCOMP</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toogle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-end text-center" id="navbarSupportedContent">
+                <ul class="navbar-nav me-4 nav-pills">
+                    <!-- class="nav-link" es para que tenga un estilo de enlace -->
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactos">Contactos</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- CARROUSEL -->
+    <div id="carouselExampleFade" class="carousel slide carousel-dark carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active " id="fondo" data-bs-interval="2000">
+                <img src="./img/portada01.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption centrar-texto-portada text-light d-none d-md-block ">
+                    <h3>algo para que el cliente le llame?</h3>
+                    <p>Descripcion breve del 1 Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" id="fondo" data-bs-interval="2000">
+                <img src="./img/portada02.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption centrar-texto-portada text-light  d-none d-md-block ">
+                    <h3>titulo del tema 2</h3>
+                    <p>Descripcion breve 2 Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" id="fondo" data-bs-interval="2000">
+                <img src="./img/portada05.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption centrar-texto-portada text-light  d-none d-md-block ">
+                    <h3>titulo de 3</h3>
+                    <p>Descripcion breve del 3 Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- RIBBON  es un contenedor que va sobresalir de los demas-->
+    <!-- container-fluid para que tenga todo el ancho -->
+    <div id="ribbon" class="container-fluid">
+        <!--rounded-lg para que tenga border redondeados -->
+        <div id="caja-sobre" class="container w-50  rounded-3">
+            <!-- row esto es una fila -->
+            <!-- align-items-center : para que centre el contendo -->
+            <div class="row align-items-center">
+                <!-- col-sm ≥576px max-width:540px -->
+                <div class="col-sm p3 w-75 mx-auto ">
+                    <!-- w-75 el 75% de su tamaño asi sera responsivo -->
+                    <!-- mx-auto es el margin en las x osea horizontal mente auto maring: 0 auto; -->
+                    <img src="./img/svg/personaje.svg" class="d-block w-100  mx-auto" alt="personaje" />
+
+                </div>
+                <!-- text-light color de texto blanco -->
+                <div class="col-sm p3 text-light text-center">
+                    <p class="text-warning  h3">Innovación y Herramientas</p>
+                    <h4 class="text-shadow">Con Tecnología </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SEPARADOR RIBBON -->
+    <div id="separador-ribbon">
+        <div class="content bg-dark"></div>
+    </div>
+    <!-- SERVICIOS -->
+    <div id="servicios">
+        <div class="container-md p-5">
+            <div class="row pt-5">
+                <h3 class="text-center pb-5 pt-2 h1 fw-bolder text-light">Nuestros Servicios</h3>
+            </div>
+            <!-- text-center alineamos alcentro todos los textos -->
+            <div class="row text-center">
+                <div class="col-sm">
+                    <div class="card w-100 car-border mb-5">
+                        <img src="./img/servicios-01.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <div class=" d-flex justify-content-center">
+                                <a href="#" class="btn  boton-servicios">Contactanos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card w-100 car-border mb-5">
+                        <img src="./img/servicios-02.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <div class=" d-flex justify-content-center">
+                                <a href="#" class="btn boton-servicios ">Contactanos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card w-100 car-border mb-5">
+                        <img src="./img/servicios-03.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <div class=" d-flex justify-content-center">
+                                <a href="#" class="btn boton-servicios ">Contactanos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FIN SERVICIOS -->
+    <!-- nosotros -->     
+    <div id="nosotros" class="container-fluid px-3 pt-5">
+        <div class="row pt-5">
+            <hr class="separacion">
+            <div class="col-md-5">
+                
+                <div class=" w-100  mb-5">
+                    <div class="caja">
+                        <h6 class="text-center pb-3 pt-2 h2 fw-bold">Contamos Con Un Equipo <p class="text-danger">Creativo<p> Descubre a Nuestros Expertos</h6>
+                            <p class="fw-bold">INTEC MURCOMP es una empresa  emergente en el mundo del software informático. Tenemos un equipo inmensamente talentoso y súper entusiasta.</p>
+                        <p class="card-text">Nuestro equipo inmensamente talentoso tiene experiencia laboral en empresas de software locales y offshore y ha demostrado su talento en proyectos offshore de GSD.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 ">
+                <div class="card w-100  car-border mb-1" style="height:90%;">
+                    <img src="./img/nosotros-02.png" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+        <hr class="separacion">
+    </div>
+    <!-- FIN Nosotros -->
+    <!-- contactos -->
+    <section class="contactos pb-5" id="contactos">
+        <!-- py-5 padding en la linea y arriba y abajo -->
+        <div class="container py-5">
+          <div class="row">
+            <!-- mx-auto esto lo ponemos para que se centre el elemento, ya que por defecto se va para la izquierda  -->
+            <div class="col-lg-6 mx-auto " >
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <!-- py-3 padding en la linea y arriba y abajo -->
+                      <div class="head text-center text-dark py-3">
+                        <h3>Cuéntanos tu proyecto</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- desde aqui ya creamos el formulario -->
+                  <form  name="contact"  method="POST" data-netlify="true">
+                    <div class="form p-3">
+                        <div class="form-row row my-5">
+                          <div class="col-lg-6 caja-relativa">
+                            <input type="text" name="nombre" class="effect-1" placeholder="Nombre" required/>
+                            <span class="focus-border-1"></span>
+                          </div>
+                          <div class="col-lg-6 caja-relativa">
+                            <input type="text" name="apellido" class="effect-1" placeholder="Apellido" required/>
+                            <span class="focus-border-1"></span>
+                          </div>
+                        </div>
+                        <div class="form-row pb-4">
+                          <div class="col-lg-12 caja-relativa">
+                            <input type="email" name="Correo" class="effect-1" placeholder="Correo" required/>
+                            <span class="focus-border-1"></span>
+                          </div>
+                        </div>
+                        <div class="form-row pt-5">
+                          <div class="col-lg-12 caja-relativa">
+                            <textarea name="mensaje" class="effect-1" rows="3" placeholder="Tu mensaje" required=""></textarea>
+                            <span class="focus-border-1"></span>
+                          </div>
+                        </div>
+                        <div class="form-row pt-4 ">
+                          <!-- offset-1 margin-left: 8.33333333%;  -->
+                          <!-- offset-2 margin-left: 16.33333333%;  -->
+                          <!-- offset-2 margin-left: 25%;  -->
+                          <!-- offset-4 margin-left: 33.33333333%;  -->
+                          <div class="col-lg-4 offset-4 ">
+                            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- fin de contactos -->
+    <!-- clientes -->
+    <!-- fin de clientes -->
+     <!-- FOOTER -->
+    <!-- estilos generales para mi footer -->
+    <footer class="bg-dark text-white pb-5 pb-4" id="footer">
+        <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">INTEC MURCOMP</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius debitis perferendis architecto odio optio tempore, pariatur ut consectetur accusantium maiores ratione natus quis veritatis iure iusto distinctio voluptatem dolor quisquam.</p>
+        </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class=" mb-4 font-weight-bold text-warning">Servicios</h5>
+            <p>
+              <a href="#" class="text-white" >Desarrollo Web</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" >Desarrollo Movil</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" >Redes e informatica</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" >Servicio técnico</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-umppercase mb-4 font-weight-bold text-warning">Enlaces favoritos</h5>
+              <p>
+                <a href="#" class="text-white" >Inicio</a>
+              </p>
+              <p>
+                <a href="#servicios" class="text-white" >Servicios</a>
+              </p>
+              <p>
+                <a href="#nosotros" class="text-white" >Nosotros</a>
+              </p>
+              <p>
+                <a href="#contactos" class="text-white" >Contactos</a>
+              </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-umppercase mb-4 font-weight-bold text-warning">Encuentranos</h5>
+              <p>
+                <!-- colocamos los iconos la cual esta enlazado al enlaza que añadimos all.min.css -->
+                <i class="fas fa-home me-3"></i>Tamburco, Urb. la inmaculada 322.Abancay-PE
+              </p>
+              <p>
+                <!-- colocamos los iconos la cual esta enlazado al enlaza que añadimos all.min.css -->
+                <i class="fas fa-envelope me-3"></i>contactos@IntecMurcop.ga
+              </p>
+              <p>
+                <!-- colocamos los iconos la cual esta enlazado al enlaza que añadimos all.min.css -->
+                <i class="fas fa-phone me-3"></i>+51 929 287 939
+              </p>
+              <p>
+                <!-- colocamos los iconos la cual esta enlazado al enlaza que añadimos all.min.css -->
+                <i class="fas fa-print me-3"></i>+51 933 494 455
+              </p>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p>Copyright © 2021 Todos los derechos reservados por:
+              <a href="#" >
+                <strong class="text-warning">INTEC MURCOMP</strong>
+              </a>
+            </p>
+          </div>
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-end">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-google-plus"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px;"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+    </footer>
+     <!--FIN FOOTER -->
+
+    <!-- script para las animaciones     -->
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- end script -->
+</body>
+
+</html>
